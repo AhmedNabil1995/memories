@@ -1,0 +1,70 @@
+.memoriesForm{
+    width: 300px;
+    position: absolute;
+    right: 30px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 20px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.memoriesForm label{
+    font-size: 17px;
+    font-weight: bold;
+    color: skyblue;
+}
+
+.memoriesForm input[type='text']{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    padding: 12px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.6s;
+    outline: none;
+}
+
+.memoriesForm input:focus{
+    border: 2px solid skyblue;
+}
+
+.memoriesForm textarea{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    padding: 12px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.6s;
+    outline: none;
+    height: 100px;
+}
+
+.memoriesForm textarea:focus{
+    border: 2px solid skyblue;
+}
+
+.memoriesForm input[type='button'],.memoriesForm input[type='submit']{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.6s;
+    outline: none;
+    text-transform: uppercase;
+    background-color: navy;
+    color: white;
+    cursor: pointer;
+}
+
+.memoriesForm input[type='button']:last-of-type{
+ background-color: red;   
+}

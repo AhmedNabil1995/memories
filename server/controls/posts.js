@@ -84,12 +84,13 @@ export const deletePost = async (req,res)=>{
 
 export const likePost = async(req,res)=>{
     let {id} = req.params
+    let userId = req.user.id;
     try {
         let post = await posts.findById(id);
-        if(post.likes.includes(id)){
-            post.likes.pop(id);
+        if(post.likes.includes(userId)){
+            post.likes.pop(userId);
         }else{
-            post.likes.push(id);
+            post.likes.push(userId);
         }
         await post.save();
         res.status(200).json('liked post')

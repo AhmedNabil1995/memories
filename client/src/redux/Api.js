@@ -41,3 +41,7 @@ export const deleteComment = (token,commentId)=> axios.delete(`${url}/comments/$
 export const getComments = (token,postId)=> axios.get(`${url}/comments/${postId}`,{
     headers:{token}
 })
+
+export const likePost = (token,postId)=> axios.patch(`${url}/posts/like/${postId}`,{},{
+    headers:{token}
+})

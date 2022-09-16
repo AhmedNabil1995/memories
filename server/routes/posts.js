@@ -16,7 +16,7 @@ router.post('/',verify,createPost)
 
 router.patch('/:id',verify,updatePost)
 
-router.patch('like/:id',verify,likePost)
+router.patch('/like/:id',verify,likePost)
 
 
 

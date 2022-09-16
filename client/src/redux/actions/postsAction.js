@@ -1,5 +1,5 @@
 import * as api from '../Api'
-import {CREATE,DELETE,UPDATE,FETCH_ALL,FETCH_POST, FETCH_OWN} from '../constant';
+import {CREATE,DELETE,UPDATE,FETCH_ALL,FETCH_POST, FETCH_OWN, LIKE_POST} from '../constant';
 
 
 export const getPosts = async (dispatch,token,id)=>{
@@ -64,6 +64,17 @@ export const updatedPost = async (dispatch,id,d,token)=>{
     try{
         let {data}  = await api.updatePost(id,d,token);
         dispatch({type:UPDATE,payload:data})
+    }catch(err){
+        console.log(err)
+}
+
+}
+
+export const likePost = async (dispatch,token,postId)=>{
+    
+    try{
+        await api.likePost(token,postId);
+        dispatch({type:LIKE_POST})
     }catch(err){
         console.log(err)
 }

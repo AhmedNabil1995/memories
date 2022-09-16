@@ -203,3 +203,25 @@ a{
     color: white;
     background-color: teal;
 }
+
+button.follow{
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    padding: 10px;
+    background-color: #00b7ff;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+button.follow:active{
+    transform: scale(0.8);
+    background-color: darkblue;
+}

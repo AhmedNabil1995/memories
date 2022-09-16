@@ -12,6 +12,9 @@ let intialState = {user:getCookie('user')?JSON.parse(getCookie('user')):null}
             return {...state,user:action.payload};
         case 'logout':
             return {user:null};
+        case 'update':
+            setCookie('user',JSON.stringify(action.payload));
+            return {user:action.payload}
         default:
             return state;
     }

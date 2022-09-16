@@ -12,7 +12,7 @@ const postReducer = (state = {posts:[]} ,action)=>{
                 return el._id !== action.payload._id
             })}
         case CREATE: 
-            return {posts:[...state.posts,action.payload]};
+            return {posts:[action.payload,...state.posts]};
         case UPDATE: 
             return {posts:state.posts.map((el)=>{
                     if(el._id == action.payload._id){return action.payload}

@@ -13,6 +13,7 @@ const Header = () => {
   }
   return (
     <div className='header'>
+        {user&&<Link to={`/explore`} className='explore'><span>Explore</span></Link>}
         <Link to={'/'}><h1>Memories</h1></Link>
         <img src={memories} alt='memories-icon'/>
         <div className='user'>

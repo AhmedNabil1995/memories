@@ -1,5 +1,5 @@
 import * as api from '../Api'
-import {CREATE,DELETE,UPDATE,FETCH_ALL,FETCH_POST, FETCH_OWN, LIKE_POST} from '../constant';
+import {CREATE,DELETE,UPDATE,FETCH_ALL,FETCH_POST, FETCH_OWN, LIKE_POST, GET_EXPLORE_POSTS} from '../constant';
 
 
 export const getPosts = async (dispatch,token,id)=>{
@@ -7,6 +7,17 @@ export const getPosts = async (dispatch,token,id)=>{
     try{
         let {data}  = await api.getPosts(token,id);
         dispatch({type:FETCH_OWN,payload:data})
+    }catch(err){
+        console.log(err)
+}
+
+}
+
+export const getExplorePosts = async (dispatch,token)=>{
+    
+    try{
+        let {data}  = await api.getExplorePosts(token);
+        dispatch({type:GET_EXPLORE_POSTS,payload:data})
     }catch(err){
         console.log(err)
 }

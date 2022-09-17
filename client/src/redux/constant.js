@@ -1,4 +1,5 @@
 export const FETCH_POST = 'FETCH_POST';
+export const GET_EXPLORE_POSTS = 'GET_EXPLORE_POSTS';
 export const FETCH_ALL = 'FETCH_ALL';
 export const FETCH_OWN = 'FETCH_OWN';
 export const CREATE = 'CREATE';

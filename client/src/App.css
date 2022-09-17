@@ -225,3 +225,16 @@ button.follow:active{
     transform: scale(0.8);
     background-color: darkblue;
 }
+
+a.explore{
+    position: absolute;
+    left: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: tomato;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1;
+    cursor: pointer;   
+}

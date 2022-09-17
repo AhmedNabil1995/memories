@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import { useSelector } from 'react-redux';
 import Profile from './pages/Profile';
+import Explore from './pages/explorePage/Explore';
 
 function App() {
   let {user} = useSelector(state=>state.auth);
@@ -17,6 +18,7 @@ function App() {
       <Route path='/login' element={user?<Navigate to={'/'}/>:<Login />} />
       <Route path='/register' element={user?<Navigate to={'/'}/>:<Register />} />
       <Route path='/profile/:id' element={user?<Profile token={user?.token}/>:<Register />} />
+      <Route path='/explore' element={user?<Explore token={user?.token}/>:<Register />} />
     </Routes>
     </BrowserRouter>
   )

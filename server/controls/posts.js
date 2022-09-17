@@ -2,6 +2,14 @@ import posts from '../models/posts.js'
 import mongoose from 'mongoose'
 import UserModel from '../models/user.js';
 
+export const getPosts = async (req,res)=>{
+    try{
+    let data = await posts.find({creator:{$ne:req.user.id}}).populate('creator').sort({createdAt:-1});
+    res.status(200).json(data);
+    }catch(eror){
+        res.status(404).json({message:eror.message})
+    }
+}
 
 export const getownPosts = async (req,res)=>{
     try{

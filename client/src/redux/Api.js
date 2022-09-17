@@ -6,6 +6,10 @@ export const getPosts = (token,id)=> axios.get(`${url}/posts/profile/${id}`,{
     headers:{token}
 })
 
+export const getExplorePosts = (token)=> axios.get(`${url}/posts`,{
+    headers:{token}
+})
+
 export const getTimeLine = (token)=> axios.get(`${url}/posts/timeline`,{
     headers:{token}
 })

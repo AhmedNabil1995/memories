@@ -1,9 +1,10 @@
 import express from 'express';
-import {getownPosts,getPost,createPost,updatePost, deletePost, likePost, timeLinePost} from '../controls/posts.js'
+import {getownPosts,getPost,createPost,updatePost, deletePost, likePost, timeLinePost, getPosts} from '../controls/posts.js'
 import { verify } from '../middleware/verify.js';
 
 let router = express.Router();
 
+router.get('/',verify,getPosts);
 
 router.get('/profile/:id',verify,getownPosts);
 
